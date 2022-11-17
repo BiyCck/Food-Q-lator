@@ -2,11 +2,18 @@ import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:food_q_lator/components/default_button.dart';
 import 'package:food_q_lator/services/constants.dart';
 
-class Onboarding1 extends StatelessWidget {
+class Onboarding1 extends StatefulWidget {
   const Onboarding1({Key? key}) : super(key: key);
 
+  @override
+  State<Onboarding1> createState() => _Onboarding1State();
+}
+
+class _Onboarding1State extends State<Onboarding1> {
+  int counter=0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,15 +57,19 @@ class Onboarding1 extends StatelessWidget {
                   Expanded(child: Column(
                     children: [
                       //TODO: Überschrift schreiben
-                      Expanded(child: Text('Hier könnte Ihre Überschrift stehen!', style: kTextStyle,)),
+                      Text('Hier könnte Ihre Überschrift stehen!', style: kTextStyle,),
+                      SizedBox(height: 30,),
                       //TODO: Text unter Überschrift schreiben
-                      Expanded(child: Text('Text unter Überschrift'))
+                      Text('Text unter Überschrift')
                     ],
                   )),
                   Expanded(child: Column(
                     children: [
-                      //TODO: Button anstatt Text
-                      Text('Hier kommt der Button hin')
+                      DefaultButton(color: Color(33), text: counter.toString(), onPressed: () {
+                        setState(() {
+                          counter++;
+                        });
+                      })
                     ],
                   ) )
                 ],

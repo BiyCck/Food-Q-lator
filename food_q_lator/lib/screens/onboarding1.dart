@@ -18,11 +18,7 @@ class _Onboarding1State extends State<Onboarding1> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        //mainAxisAlignment: MainAxisAlignment.center,
-        //crossAxisAlignment: CrossAxisAlignment.stretch,
-        //mainAxisSize: MainAxisSize.max,
         children: [
-
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -31,25 +27,22 @@ class _Onboarding1State extends State<Onboarding1> {
             ],
           ),
           Expanded (child:Column(
-
-            //crossAxisAlignment: CrossAxisAlignment.center,
-            //mainAxisSize: MainAxisSize.max,
             children: [
               //Picture
               Expanded(child: Column (
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Expanded(child: Container(
-                      //height: 120.0,
-                      //width: 120.0,
                       decoration: BoxDecoration(
                       image: DecorationImage(image: AssetImage(
-                          '../../images/ikigai-udon-recipe-1.png'), fit: BoxFit.fill
+                          'images/ikigai-udon-recipe-1.png'), fit: BoxFit.fill
                     ),
                   )
-                  ))],
-              ))
-              ,
+                  ),
+                  ),
+                ],
+              ),
+              ),
               //Text unter dem Bild
               Expanded(child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -62,24 +55,31 @@ class _Onboarding1State extends State<Onboarding1> {
                       //TODO: Text unter Überschrift schreiben
                       Text('Text unter Überschrift')
                     ],
-                  )),
+                  ),
+                  ),
                   Expanded(child: Column(
                     children: [
+                      //TODO: Weiterleitung auf eine andere Seite
                       DefaultButton(color: Color(33), text: counter.toString(), onPressed: () {
                         setState(() {
                           counter++;
-                        });
-                      })
+                        },
+                        );
+                      },
+                      ),
                     ],
-                  ) )
+                  ),
+                  ),
                 ],
-              ))
+              ),
+              ),
+
 
             ],
-          )
+          ),
 
 
-          )
+          ),
         ],
       ),
 

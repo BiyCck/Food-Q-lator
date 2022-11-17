@@ -50,9 +50,9 @@ class Onboarding1 extends StatelessWidget {
                   Expanded(child: Column(
                     children: [
                       //TODO: Überschrift schreiben
-                      Text('Hier könnte Ihre Überschrift stehen!', style: kTextStyle,),
+                      Expanded(child: Text('Hier könnte Ihre Überschrift stehen!', style: kTextStyle,)),
                       //TODO: Text unter Überschrift schreiben
-                      Text('Text unter Überschrift')
+                      Expanded(child: Text('Text unter Überschrift'))
                     ],
                   )),
                   Expanded(child: Column(

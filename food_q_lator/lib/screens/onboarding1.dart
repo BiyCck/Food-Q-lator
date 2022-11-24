@@ -65,16 +65,16 @@ class _Onboarding1State extends State<Onboarding1> {
                         Expanded(
                           child: Column(
                             children: [
-                              //TODO: Überschrift schreiben
                               Text(
-                                'Hier könnte Ihre Überschrift stehen!',
+                                'Food-Q-Lator',
                                 style: kTextStyle,
                               ),
                               SizedBox(
                                 height: 30,
                               ),
-                              //TODO: Text unter Überschrift schreiben
-                              Text('Text unter Überschrift')
+                              Text('Sie sind in der Stadt und wissen nicht, wo sie ihr Lieblingsgericht finden?'),
+                              Text('Oder wollen beim Mittagessen kein Vermögen ausgeben?'),
+                              Text('Dann haben wir eine Lösung für sie parat!')
                             ],
                           ),
                         ),

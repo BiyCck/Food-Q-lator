@@ -7,9 +7,11 @@ class DefaultButton extends StatelessWidget {
 
   DefaultButton(
       {super.key,
+
       required this.color,
       required this.text,
       required this.onPressed});
+
 
   @override
   Widget build(BuildContext context) {
@@ -23,4 +25,5 @@ class DefaultButton extends StatelessWidget {
       ),
     );
   }
+
 }

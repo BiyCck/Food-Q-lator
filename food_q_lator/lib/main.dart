@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_q_lator/screens/home_screen.dart';
-import 'package:food_q_lator/screens/restaurant_list.dart';
+import 'package:food_q_lator/screens/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +27,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
-      routes: {'/': (context) => HomeScreen()},
+      routes: {
+        '/': (context) => HomeScreen(),
+        '/loginScreen': (context) => LoginScreen()
+      },
     );
   }
 }

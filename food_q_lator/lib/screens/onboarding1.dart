@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_q_lator/components/default_button.dart';
+import 'package:food_q_lator/screens/home_screen.dart';
+import 'package:food_q_lator/screens/restaurant_list.dart';
 import 'package:food_q_lator/services/constants.dart';
 
 class Onboarding1 extends StatefulWidget {
@@ -22,8 +24,14 @@ class _Onboarding1State extends State<Onboarding1> {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              //TODO: Text zu Link
-              Text('Skip')
+              //TODO: richtigen Link einfügen
+              DefaultButton(color: Color(33), text: 'Skip', onPressed: () {
+                setState(() {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()),);
+                },
+                );
+              }
+              ),
             ],
           ),
           Expanded (child:Column(
@@ -59,10 +67,10 @@ class _Onboarding1State extends State<Onboarding1> {
                   ),
                   Expanded(child: Column(
                     children: [
-                      //TODO: Weiterleitung auf eine andere Seite
-                      DefaultButton(color: Color(33), text: counter.toString(), onPressed: () {
+                      //TODO: Weiterleitung auf onboarding2
+                      DefaultButton(color: Color(33), text: 'Weiter', onPressed: () {
                         setState(() {
-                          counter++;
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const HomeScreen()),);
                         },
                         );
                       },

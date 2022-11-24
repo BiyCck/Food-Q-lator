@@ -43,6 +43,7 @@ class _Onboarding3State extends State<Onboarding3> {
                     backgroundColor: kPrimaryColor,
                     padding: const EdgeInsets.all(15.0),
                     textStyle: const TextStyle(fontSize: 20),
+                    
                   ),
                   onPressed: () {},
                   child: const Text('Anmelden'),

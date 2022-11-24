@@ -26,20 +26,15 @@ class _Onboarding1State extends State<Onboarding1> {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 //TODO: richtigen Link einfügen
-                DefaultButton(
-                    color: Color(33),
-                    text: 'Skip',
-                    onPressed: () {
-                      setState(
-                        () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const HomeScreen()),
-                          );
-                        },
-                      );
-                    }),
+                new InkWell(
+                    child: new Text('Skip ->'),
+                    onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                          const HomeScreen()),
+                    )
+                ),
               ],
             ),
             Expanded(

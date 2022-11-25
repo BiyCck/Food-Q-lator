@@ -4,7 +4,7 @@ import 'package:food_q_lator/screens/home_screen.dart';
 import 'package:food_q_lator/screens/login_screen.dart';
 
 import 'package:food_q_lator/screens/onboarding1.dart';
-import 'package:food_q_lator/screens/restaurant_list.dart';
+import 'package:food_q_lator/screens/signup_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,9 +32,10 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => HomeScreen(),
-        '/loginScreen': (context) => LoginScreen(),
-        '/onboarding1': (context) => Onboarding1()
+        '/': (context) => const HomeScreen(),
+        '/loginScreen': (context) => const LoginScreen(),
+        '/onboarding1': (context) => const Onboarding1(),
+        '/signupScreen': (context) => const SignUpScreen()
       },
     );
   }

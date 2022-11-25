@@ -35,6 +35,12 @@ const kLoginInputLabelTextStyle = TextStyle(
   color: kSecondaryText,
 );
 
+const kTermsAndConditionsTextStyle = TextStyle(
+  fontFamily: 'Montserrat',
+  fontSize: 11.0,
+  fontWeight: FontWeight.bold,
+  color: kSecondaryText,
+);
 //Primaries
 const kPrimaryColor = Color(0xFF00BCD4);
 

@@ -7,9 +7,11 @@ class DefaultButton extends StatefulWidget {
 
   DefaultButton(
       {super.key,
+
       required this.color,
       required this.text,
       required this.onPressed});
+
 
   @override
   State<DefaultButton> createState() => _DefaultButtonState();
@@ -34,4 +36,5 @@ class _DefaultButtonState extends State<DefaultButton> {
       ),
     );
   }
+
 }

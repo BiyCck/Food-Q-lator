@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_q_lator/components/default_button.dart';
+import 'package:food_q_lator/screens/signup_screen.dart';
 import 'package:food_q_lator/services/constants.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -15,6 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     var shade1002 = Colors.grey.shade100;
     return Scaffold(
+      backgroundColor: shade1002,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -118,11 +120,17 @@ class _LoginScreenState extends State<LoginScreen> {
                         children: [
                           const Text('Hast du noch kein Konto?'),
                           TextButton(
-                            onPressed: (() {}),
+                            onPressed: (() {
+                              Navigator.of(context).pushAndRemoveUntil(
+                                  MaterialPageRoute(
+                                    builder: ((context) => SignUpScreen()),
+                                  ),
+                                  (route) => false);
+                            }),
                             child: Text('Registriere dich!'),
                           ),
                         ],
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -131,7 +139,6 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
       ),
-      backgroundColor: shade1002,
     );
   }
 }

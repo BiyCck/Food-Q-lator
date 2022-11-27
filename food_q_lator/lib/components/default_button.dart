@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 
 class DefaultButton extends StatefulWidget {
-  String text;
-  Color color;
-  VoidCallback onPressed;
+  final String text;
+  final Color color;
+  final VoidCallback onPressed;
 
-  DefaultButton(
+  const DefaultButton(
       {super.key,
-
       required this.color,
       required this.text,
       required this.onPressed});
-
 
   @override
   State<DefaultButton> createState() => _DefaultButtonState();
@@ -36,5 +34,4 @@ class _DefaultButtonState extends State<DefaultButton> {
       ),
     );
   }
-
 }

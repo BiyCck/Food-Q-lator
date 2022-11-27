@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:food_q_lator/services/constants.dart';
 
@@ -9,6 +11,21 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    startAnimation();
+  }
+
+  startAnimation() async {
+    var duration = const Duration(seconds: 3);
+    return Timer(duration, route);
+  }
+
+  route() {
+    Navigator.pushNamed(context, '/onboarding1');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,12 +42,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 textAlign: TextAlign.center,
               ),
             ),
-            Icon(
-              Icons.calculate,
-              color: Colors.white,
-              size: 150.0,
-            ),
-          ],
-        ));
+          const Icon(
+            Icons.calculate,
+            color: Colors.white,
+            size: 150.0,
+          ),
+        ],
+      ),
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_q_lator/screens/forgotpassword_screen.dart';
 import 'package:food_q_lator/screens/home_screen.dart';
 
 import 'package:food_q_lator/screens/login_screen.dart';
@@ -35,7 +36,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomeScreen(),
         '/loginScreen': (context) => const LoginScreen(),
         '/onboarding1': (context) => const Onboarding1(),
-        '/signupScreen': (context) => const SignUpScreen()
+        '/signupScreen': (context) => const SignUpScreen(),
+        '/forgotpasswordScreen': (context) => const ForgotPasswordScreen()
       },
     );
   }

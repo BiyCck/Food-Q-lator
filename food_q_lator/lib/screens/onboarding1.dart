@@ -7,6 +7,8 @@ import 'package:food_q_lator/screens/home_screen.dart';
 import 'package:food_q_lator/screens/restaurant_list.dart';
 import 'package:food_q_lator/services/constants.dart';
 
+import 'onboarding3.dart';
+
 class Onboarding1 extends StatefulWidget {
   const Onboarding1({Key? key}) : super(key: key);
 
@@ -92,7 +94,7 @@ class _Onboarding1State extends State<Onboarding1> {
                                         context,
                                         MaterialPageRoute(
                                             builder: (context) =>
-                                                const HomeScreen()),
+                                                const Onboarding3()),
                                       );
                                     },
                                   );

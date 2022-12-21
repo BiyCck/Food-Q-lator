@@ -5,7 +5,7 @@ import 'package:food_q_lator/screens/home_screen.dart';
 import 'package:food_q_lator/services/constants.dart';
 
 class Onboarding3 extends StatefulWidget {
-  const Onboarding3({super.key});
+  const Onboarding3({Key? key}) : super(key: key);
 
   @override
   State<Onboarding3> createState() => _Onboarding3State();

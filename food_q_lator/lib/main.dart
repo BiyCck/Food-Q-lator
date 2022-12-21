@@ -5,7 +5,12 @@ import 'package:food_q_lator/screens/home_screen.dart';
 import 'package:food_q_lator/screens/login_screen.dart';
 
 import 'package:food_q_lator/screens/onboarding1.dart';
+
 import 'package:food_q_lator/screens/signup_screen.dart';
+
+import 'package:food_q_lator/screens/onboarding3.dart';
+import 'package:food_q_lator/screens/restaurant_list.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +23,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -37,8 +43,10 @@ class MyApp extends StatelessWidget {
         '/loginScreen': (context) => const LoginScreen(),
         '/onboarding1': (context) => const Onboarding1(),
         '/signupScreen': (context) => const SignUpScreen(),
-        '/forgotpasswordScreen': (context) => const ForgotPasswordScreen()
+        '/forgotpasswordScreen': (context) => const ForgotPasswordScreen(),
+        '/onboarding3': (context) => Onboarding3()
       },
     );
+
   }
 }

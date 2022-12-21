@@ -4,6 +4,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:food_q_lator/screens/home_screen.dart';
 import 'package:food_q_lator/services/constants.dart';
 
+import 'login_screen.dart';
+
 class Onboarding3 extends StatefulWidget {
   const Onboarding3({Key? key}) : super(key: key);
 
@@ -33,6 +35,7 @@ class _Onboarding3State extends State<Onboarding3> {
                     padding: const EdgeInsets.all(15.0),
                     textStyle: const TextStyle(fontSize: 20),
                   ),
+                  //TODO: Weiterleitung zur Google Anmeldung (auch bei LoginScreen)
                   onPressed: () {},
                   child: const Text('Mit Google anmelden'),
                 ),
@@ -45,7 +48,9 @@ class _Onboarding3State extends State<Onboarding3> {
                     textStyle: const TextStyle(fontSize: 20),
                     
                   ),
-                  onPressed: () {},
+                  onPressed: () => Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => const LoginScreen()),
+                      ),
                   child: const Text('Anmelden'),
                 ),
             SizedBox(height: 20.0,),

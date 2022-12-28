@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:food_q_lator/components/default_button.dart';
 import 'package:food_q_lator/screens/home_screen.dart';
-import 'package:food_q_lator/screens/restaurant_list.dart';
+import 'package:food_q_lator/screens/restaurantScreen.dart';
 import 'package:food_q_lator/services/constants.dart';
 
 class Onboarding1 extends StatefulWidget {

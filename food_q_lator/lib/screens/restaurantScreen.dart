@@ -1,131 +1,18 @@
 
-import 'dart:async';
-
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' show get;
-import 'dart:convert';
+import 'package:food_q_lator/screens/restaurantList.dart';
 
-class Restaurant {
-  final String id;
-  final String name, city, cuisineStyle, ranking, rating, priceRange, numberReviews, reviews, urlTA, idTA;
-
-  Restaurant({
-    required this.id,
-    required this.name,
-    required this.city,
-    required this.cuisineStyle,
-    required this.ranking,
-    required this.rating,
-    required this.priceRange,
-    required this.numberReviews,
-    required this.reviews,
-    required this.urlTA,
-    required this.idTA
-  });
-
-  factory Restaurant.fromJson(Map<String, dynamic> jsonData) {
-    return Restaurant(
-      id: jsonData['id'],
-      name: jsonData['name'],
-      city: jsonData['location'],
-      cuisineStyle: jsonData['cuisineStyle'],
-      ranking: jsonData['ranking'],
-      rating: jsonData['rating'],
-      priceRange: jsonData['priceRange'],
-      numberReviews: jsonData['numberReviews'],
-      reviews: jsonData['reviews'],
-      urlTA: jsonData['urlTA'],
-      idTA: jsonData['idTA'],
-    );
-  }
-
-
-}
-
-
-class CustomListView extends StatelessWidget {
-  final List<Restaurant> restaurants;
-
-  CustomListView(this.restaurants);
-
-  Widget build(context) {
-    return ListView.builder(
-      itemCount: restaurants.length,
-      itemBuilder: (context, int currentIndex) {
-        return createViewItem(restaurants[currentIndex], context);
-      },
-    );
-  }
-
-  Widget createViewItem(Restaurant restaurant, BuildContext context) {
-    return ListTile(
-      title: new Card(
-        elevation: 5.0,
-        child: new Container(
-          decoration: BoxDecoration(border: Border.all(color: Colors.orange)),
-          padding: EdgeInsets.all(20.0),
-          margin: EdgeInsets.all(20.0),
-          child: Column(
-            children: <Widget>[
-              Row(children: <Widget>[
-                Padding(
-                    child: Text(
-                      restaurant.name,
-                      style: new TextStyle(fontWeight: FontWeight.bold),
-                      textAlign: TextAlign.right,
-                    ),
-                    padding: EdgeInsets.all(1.0)),
-                Text(" | "),
-                Padding(
-                    child: Text(
-                      restaurant.city,
-                      style: new TextStyle(fontStyle: FontStyle.italic),
-                      textAlign: TextAlign.right,
-                    ),
-                    padding: EdgeInsets.all(1.0)),
-              ],
-              )
-            ],
-          ),
-
-        ),
-
-      ),
-      onTap: () {
-        var route = new MaterialPageRoute(
-          builder: (BuildContext context) =>
-          new SecondScreen(value: restaurant),
-        );
-        Navigator.of(context).push(route);
-      },
-    );
-  }
-
-}
-
-Future<List<Restaurant>> downloadJSON() async {
-  final jsonEndpoint = "http://192.168.178.31/PHP/foodqlator";
-
-  final response = await get(Uri.parse(jsonEndpoint));
-
-  if (response.statusCode == 200) {
-    List restaurants = json.decode(response.body);
-    return restaurants.map((restaurant) => new Restaurant.fromJson(restaurant)).toList();
-  } else
-    throw Exception('We were not able to successfully download the json.data');
-}
-
-class SecondScreen extends StatefulWidget{
+class RestaurantScreen extends StatefulWidget{
   final Restaurant value;
 
-  SecondScreen({required this.value});
+  RestaurantScreen({required this.value});
 
   @override
-  _SecondScreenState createState() => _SecondScreenState();
+  _RestaurantScreenState createState() => _RestaurantScreenState();
 }
 
-class _SecondScreenState extends State<SecondScreen> {
+class _RestaurantScreenState extends State<RestaurantScreen> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(

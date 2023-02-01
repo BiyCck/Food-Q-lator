@@ -84,7 +84,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                 child: SizedBox(),
                               ),
                               TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.pushNamed(
+                                      context, '/forgotpasswordScreen');
+                                },
                                 child: const Text(
                                   'Passwort vergessen?',
                                   style: kForgotPasswordTextStyle,

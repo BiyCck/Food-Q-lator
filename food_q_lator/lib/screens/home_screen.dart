@@ -23,25 +23,25 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   route() {
-    Navigator.pushNamed(context, '/onboarding1');
+    Navigator.pushNamed(context, '/loginScreen');
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color(0xFF00BCD4),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'Welcome to the Food-Q-Lator',
-                style: kTextStyle,
-                textAlign: TextAlign.center,
-              ),
+      backgroundColor: const Color(0xFF00BCD4),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              'Welcome to the Food-Q-Lator',
+              style: kTextStyle,
+              textAlign: TextAlign.center,
             ),
+          ),
           const Icon(
             Icons.calculate,
             color: Colors.white,

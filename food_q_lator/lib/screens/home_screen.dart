@@ -23,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   route() {
-    Navigator.pushNamed(context, '/onboarding1');
+    Navigator.pushNamed(context, '/loginScreen');
   }
 
   @override

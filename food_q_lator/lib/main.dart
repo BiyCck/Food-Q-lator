@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_q_lator/screens/forgotpassword_screen.dart';
 import 'package:food_q_lator/screens/home_screen.dart';
+import 'package:food_q_lator/screens/item_card.dart';
 
 import 'package:food_q_lator/screens/login_screen.dart';
 import 'package:food_q_lator/screens/menu_page.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      initialRoute: '/',
+      initialRoute: '/itemCard',
       routes: {
         '/': (context) => const HomeScreen(),
         '/loginScreen': (context) => const LoginScreen(),
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
         '/forgotpasswordScreen': (context) => const ForgotPasswordScreen(),
         '/onboarding3': (context) => const Onboarding3(),
         '/homePage': (context) => const HomePage(),
+        '/itemCard': (context) => const ItemCard()
       },
     );
   }
